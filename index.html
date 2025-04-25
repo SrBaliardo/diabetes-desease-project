@@ -1,0 +1,511 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+      integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
+      crossorigin="anonymous"
+    />
+
+    <link rel="stylesheet" href="./css/reset.css" />
+    <link rel="stylesheet" href="./css/global.css" />
+    <link rel="stylesheet" href="./css/responsive.css" />
+    <link rel="stylesheet" href="./css/styles.css" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+
+    <title>Diabetes</title>
+  </head>
+  <body class="">
+    <header>
+      <img src="./images/logo-grau-branco.png" class="bg-transparent" />
+
+      <div class="nav bg-transparent">
+        <a href="#start">
+          <button type="button" class="btn-sm border-0 px-2 button">
+            Início
+          </button>
+        </a>
+        <a href="#about">
+          <button type="button" class="btn-sm border-0 px-2 button">
+            Sobre o Projeto
+          </button>
+        </a>
+        <a href="#group">
+          <button type="button" class="btn-sm border-0 px-2 button">
+            Integrantes
+          </button>
+        </a>
+        <a href="#care">
+          <button type="button" class="btn-sm border-0 px-2 button">
+            Tipos
+          </button>
+        </a>
+        <a href="#pregnant">
+          <button type="button" class="btn-sm border-0 px-2 button">
+            Gestacional
+          </button>
+        </a>
+        <a href="#params">
+          <button type="button" class="btn-sm border-0 px-2 button">
+            Panorama
+          </button>
+        </a>
+      </div>
+    </header>
+    <main class="centralizer">
+      <section class="sec1 pt-5" id="start">
+        <div
+          id="carouselExampleControls"
+          class="carousel slide carousel-fade bg-transparent pt-5 mt-5"
+          data-ride="carousel"
+          data-interval="3000"
+          data-pause="hover"
+        >
+          <div class="carousel-inner radius bg-transparent">
+            <div class="carousel-item active">
+              <a href="#care">
+                <img
+                  class="d-block w-100"
+                  src="./images/img1.png"
+                  alt="Primeiro Slide"
+                />
+              </a>
+            </div>
+            <div class="carousel-item">
+              <a href="#pregnant">
+                <img
+                  class="d-block w-100"
+                  src="./images/img2.png"
+                  alt="Segundo Slide"
+                />
+              </a>
+            </div>
+            <div class="carousel-item">
+              <a
+                href="https://srbaliardo.github.io/imc-calculator/"
+                target="_blank"
+              >
+                <img
+                  class="d-block w-100"
+                  src="./images/img3.png"
+                  alt="Terceiro Slide"
+                />
+              </a>
+            </div>
+          </div>
+          <a
+            class="carousel-control-prev iColor"
+            href="#carouselExampleControls"
+            role="button"
+            data-slide="prev"
+          >
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="sr-only">Anterior</span>
+          </a>
+          <a
+            class="carousel-control-next iColor"
+            href="#carouselExampleControls"
+            role="button"
+            data-slide="next"
+          >
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="sr-only">Próximo</span>
+          </a>
+        </div>
+      </section>
+
+      <div class="intersection" id="about"></div>
+
+      <section>
+        <h2>Sobre o Projeto</h2>
+        <div class="text">
+          <p>
+            Este material faz parte de um trabalho acadêmico desenvolvido pela
+            turma do curso Técnico em Enfermagem da Escola GRAU Técnico, como
+            parte das atividades avaliativas.
+          </p>
+
+          <p>
+            O objetivo do estudo é aprofundar o conhecimento sobre a Diabetes
+            Mellitus, uma das principais doenças crônicas que afetam a população
+            brasileira e mundial, destacando suas formas de manifestação,
+            causas, tratamento e estratégias de prevenção. O conteúdo foi
+            organizado em três partes:
+          </p>
+
+          <p>
+            <b>Identificação e Sintomas da Diabetes</b> - Nesta seção, são
+            descritos os principais sinais clínicos da diabetes tipo 1 e tipo 2,
+            a forma como esses sintomas evoluem e se agravam, as prováveis
+            causas do desenvolvimento da doença e as medidas preventivas
+            recomendadas com foco na atenção primária à saúde.
+          </p>
+
+          <p>
+            <b>Diabetes Gestacional</b> - Aborda a condição específica que afeta
+            mulheres durante a gestação, com destaque para os métodos de
+            diagnóstico, tratamento adequado durante o pré-natal, riscos
+            associados à mãe e ao bebê, e os cuidados necessários para evitar
+            complicações futuras.
+          </p>
+
+          <p>
+            <b>Panorama Epidemiológico no Brasil e no Mundo</b> - Traz dados
+            atualizados sobre a prevalência da diabetes no Brasil, principais
+            tipos que afetam a população, comparações com índices globais e
+            análise de fatores sociais, culturais e econômicos que influenciam o
+            aumento dos casos.
+          </p>
+
+          <p>
+            Este trabalho integra-se às práticas pedagógicas do curso com o
+            propósito de formar profissionais conscientes, críticos e preparados
+            para atuar na promoção da saúde e no cuidado integral do paciente
+            diabético, seja na atenção básica, no ambiente hospitalar ou
+            domiciliar.
+          </p>
+
+          <p><b>Turma:</b> Técnico em Enfermagem - Turma P - Noturno</p>
+
+          <p><b>Instituição:</b> Escola GRAU Técnico</p>
+
+          <p><b>Ano Letivo:</b> 2025</p>
+        </div>
+      </section>
+
+      <div class="intersection" id="group"></div>
+
+      <section>
+        <h2>Integrantes:</h2>
+        <div
+          class="text group-container d-flex align-items-center justify-content-center bg-transparent"
+        >
+          <div class="card d-flex align-items-center border-0 bg-transparent">
+            <img class="card-img-top" src="./images/albert.png" />
+            <div class="card-body bg-transparent">
+              <h5 class="card-title bg-transparent">Pelópedas</h5>
+            </div>
+          </div>
+
+          <div class="card d-flex align-items-center border-0 bg-transparent">
+            <img
+              class="card-img-top"
+              src="./images/doido.png"
+              alt="Imagem de capa do card"
+            />
+            <div class="card-body bg-transparent">
+              <h5 class="card-text bg-transparent">Doido</h5>
+            </div>
+          </div>
+
+          <div class="card d-flex align-items-center border-0 bg-transparent">
+            <img
+              class="card-img-top"
+              src="./images/fulana.png"
+              alt="Imagem de capa do card"
+            />
+            <div class="card-body bg-transparent">
+              <h5 class="card-title bg-transparent">Fulana</h5>
+            </div>
+          </div>
+
+          <div class="card d-flex align-items-center border-0 bg-transparent">
+            <img
+              class="card-img-top"
+              src="./images/maju.png"
+              alt="Imagem de capa do card"
+            />
+            <div class="card-body bg-transparent">
+              <h5 class="card-title bg-transparent">Maju</h5>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <div class="intersection" id="care"></div>
+
+      <section>
+        <h2>Identificação e Sintomas da Diabetes</h2>
+        <div class="text">
+          <h5>Sintomas, Identificação, Causas e Prevenção</h5>
+          <p>
+            A diabetes mellitus é uma condição crônica que afeta a forma como o
+            corpo utiliza a glicose, principal fonte de energia. Existem três
+            tipos principais: tipo 1, tipo 2 e diabetes gestacional. Vamos focar
+            agora nos sintomas, causas, evolução e prevenção dos tipos 1 e 2.
+          </p>
+
+          <b> Principais sintomas da diabetes </b>
+          <p>
+            Os sintomas iniciais podem ser sutis, principalmente no tipo 2.
+            Alguns sinais comuns incluem:
+          </p>
+
+          <ul>
+            <li>Sede excessiva (polidipsia)</li>
+            <li>Urinar com frequência (poliúria)</li>
+            <li>Fome exagerada (polifagia)</li>
+            <li>Cansaço constante</li>
+            <li>Perda de peso sem explicação (mais comum no tipo 1)</li>
+            <li>Visão embaçada</li>
+            <li>Infecções frequentes (urinárias, de pele, gengiva)</li>
+            <li>Feridas que demoram a cicatrizar</li>
+            <li>Formigamento ou dormência nas mãos e pés</li>
+          </ul>
+
+          <b> Como identificar e como os sintomas se intensificam </b>
+          <p>
+            A diabetes pode ser diagnosticada por meio de exames de sangue,
+            como:
+          </p>
+
+          <ul>
+            <li>Glicemia de jejum</li>
+            <li>Hemoglobina glicada (HbA1c)</li>
+            <li>Teste oral de tolerância à glicose</li>
+          </ul>
+
+          <p>
+            Sem tratamento, os sintomas se intensificam, podendo levar a
+            complicações graves como:
+          </p>
+          <ul>
+            <li>Neuropatia diabética (danos nos nervos)</li>
+            <li>Retinopatia (danos nos olhos)</li>
+            <li>Doenças cardiovasculares</li>
+            <li>Insuficiência renal</li>
+          </ul>
+
+          <b>Graus de lesões:</b>
+          <div
+            class="group-container2 d-flex align-items-center bg-transparent my-3"
+          >
+            <div class="card d-flex align-items-center border-0 bg-transparent">
+              <img class="card-img-top" src="./images/diabetes_grau1.png" />
+            </div>
+
+            <div class="card d-flex align-items-center border-0 bg-transparent">
+              <img class="card-img-top" src="./images/diabetes_grau2.png" />
+            </div>
+
+            <div class="card d-flex align-items-center border-0 bg-transparent">
+              <img class="card-img-top" src="./images/diabetes_grau3.png" />
+            </div>
+
+            <div class="card d-flex align-items-center border-0 bg-transparent">
+              <img class="card-img-top" src="./images/diabetes_grau4.png" />
+            </div>
+
+            <div class="card d-flex align-items-center border-0 bg-transparent">
+              <img class="card-img-top" src="./images/diabetes_grau5.png" />
+            </div>
+          </div>
+
+          <div
+            id="imageModal"
+            class="image-modal"
+            onclick="closeImageModal(event)"
+          >
+            <img id="modalImage" class="modal-content" />
+          </div>
+
+          <b>Possíveis causas</b>
+          <ul>
+            <li>Genética: maior fator no diabetes tipo 1.</li>
+            <li>
+              Estilo de vida: obesidade, sedentarismo e alimentação rica em
+              açúcares e gorduras são os maiores gatilhos para o tipo 2.
+            </li>
+            <li>Idade: risco aumenta com o envelhecimento.</li>
+            <li>
+              Outros fatores: hipertensão, colesterol alto e histórico familiar.
+            </li>
+          </ul>
+
+          <b>Como evitar a diabetes</b>
+          <ul>
+            <li>
+              Alimentação equilibrada, rica em fibras, vegetais e com menos
+              açúcar e gordura.
+            </li>
+            <li>Prática regular de atividades físicas.</li>
+            <li>Manutenção do peso saudável.</li>
+            <li>
+              Monitoramento de níveis de glicose, especialmente para quem tem
+              histórico familiar.
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      <div class="intersection" id="pregnant"></div>
+
+      <section>
+        <h2>Diabetes Gestacional</h2>
+        <div class="text">
+          <h5>Diabetes Gestacional - Identificação, Tratamento e Cuidados</h5>
+          <p>
+            A diabetes gestacional é um tipo de diabetes que surge durante a
+            gravidez e desaparece geralmente após o parto. Porém, exige atenção,
+            pois traz riscos tanto para a mãe quanto para o bebê.
+          </p>
+
+          <b>Como identificar</b>
+
+          <ul>
+            <li>Geralmente, é assintomática.</li>
+            <li>
+              Detectada entre a 24ª e 28ª semanas de gestação por meio do teste
+              oral de tolerância à glicose (TOTG).
+            </li>
+            <li>
+              Em alguns casos, sintomas semelhantes ao diabetes tipo 2 podem
+              surgir: sede excessiva, fadiga, visão embaçada e aumento da
+              frequência urinária.
+            </li>
+          </ul>
+
+          <b>Tratamento</b>
+          <ul>
+            <li>
+              Controle da dieta: plano alimentar saudável é a base do
+              tratamento.
+            </li>
+            <li>Exercícios físicos leves, com orientação médica.</li>
+            <li>Monitoramento frequente da glicemia.</li>
+            <li>
+              Em alguns casos, pode ser necessário uso de insulina, já que
+              medicamentos orais geralmente não são recomendados durante a
+              gestação.
+            </li>
+          </ul>
+
+          <b>Riscos para a mãe</b>
+          <ul>
+            <li>Pré-eclâmpsia (hipertensão na gravidez)</li>
+            <li>Maior chance de desenvolver diabetes tipo 2 no futuro</li>
+            <li>Trabalho de parto prematuro ou parto cesáreo</li>
+          </ul>
+
+          <b>Riscos para o bebê</b>
+          <ul>
+            <li>Macrossomia (bebê muito grande, dificultando o parto)</li>
+            <li>Hipoglicemia neonatal</li>
+            <li>Icterícia</li>
+            <li>Risco aumentado de obesidade e diabetes na vida adulta</li>
+          </ul>
+
+          <b>Cuidados para evitar</b>
+          <ul>
+            <li>Fazer pré-natal adequado</li>
+            <li>Manter peso saudável antes e durante a gestação</li>
+            <li>Alimentar-se bem e praticar exercícios físicos</li>
+            <li>Evitar consumo excessivo de açúcares e carboidratos simples</li>
+          </ul>
+        </div>
+      </section>
+
+      <div class="intersection" id="params"></div>
+
+      <section>
+        <h2>Panorama Epidemiológico no Brasil e no Mundo</h2>
+        <div class="text">
+          <h5>Diabetes no Brasil e no Mundo - Estatísticas e Comparações</h5>
+          <p>
+            A diabetes é um dos maiores desafios de saúde pública mundial. No
+            Brasil, a situação é preocupante e segue a tendência global de
+            crescimento da doença.
+          </p>
+
+          <b>Números no Brasil</b>
+          <ul>
+            <li>
+              Aproximadamente 17 milhões de brasileiros vivem com diabetes
+              (2024).
+            </li>
+            <li>Corresponde a cerca de 10% da população adulta.</li>
+            <li>
+              A maioria dos casos é de diabetes tipo 2, ligado ao estilo de
+              vida.
+            </li>
+            <li>
+              O Brasil está entre os 10 países com maior número de pessoas com
+              diabetes no mundo.
+            </li>
+          </ul>
+
+          <b>Principais tipos no Brasil</b>
+          <ul>
+            <li>
+              Tipo 2: 90% dos casos. Mais comum em adultos, mas crescendo entre
+              jovens.
+            </li>
+            <li>
+              Tipo 1: 5-10% dos casos. Geralmente aparece na infância ou
+              adolescência.
+            </li>
+            <li>Gestacional: afeta cerca de 7% das gestantes brasileiras.</li>
+          </ul>
+
+          <b>Comparação com o mundo</b>
+          <ul>
+            <li>
+              Média mundial: cerca de 8,5% da população adulta tem diabetes.
+            </li>
+            <li>Índia e China lideram em número absoluto de casos.</li>
+            <li>
+              Países desenvolvidos, como os EUA, têm taxas elevadas, porém com
+              maior acesso a tratamento.
+            </li>
+            <li>
+              Países africanos apresentam crescimento rápido nos casos, mas com
+              subdiagnóstico.
+            </li>
+          </ul>
+
+          <b>Fatores que agravam a situação no Brasil</b>
+          <ul>
+            <li>Sedentarismo</li>
+            <li>Alimentação ultraprocessada</li>
+            <li>Urbanização rápida e desigualdade no acesso à saúde</li>
+            <li>Baixo controle glicêmico em muitos pacientes</li>
+          </ul>
+        </div>
+      </section>
+    </main>
+
+    <footer id="p_dev">
+      <span class=""></span> 2025
+      <a href="https://www.linkedin.com/in/john-baliardo">JHAB Dev</a> - Todos
+      os direitos reservados
+    </footer>
+
+    <script
+      src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+      integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
+      integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"
+      integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
+      crossorigin="anonymous"
+    ></script>
+    <script src="./javascript/btnClickSplash.js"></script>
+    <script src="./javascript/modal.js"></script>
+  </body>
+</html>
