@@ -4,6 +4,8 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
+    <link rel="shortcut icon" href="./images/favicon.ico" type="image/x-icon" />
+
     <link
       rel="stylesheet"
       href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
@@ -13,8 +15,8 @@
 
     <link rel="stylesheet" href="./css/reset.css" />
     <link rel="stylesheet" href="./css/global.css" />
-    <link rel="stylesheet" href="./css/responsive.css" />
     <link rel="stylesheet" href="./css/styles.css" />
+    <link rel="stylesheet" href="./css/responsive.css" />
 
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -23,43 +25,35 @@
       rel="stylesheet"
     />
 
-    <title>Diabetes</title>
+    <title>Diabetes - Projeto GRAU</title>
   </head>
   <body class="">
     <header>
-      <img src="./images/logo-grau-branco.png" class="bg-transparent" />
+      <div class="header-content">
+        <img src="./images/logo-grau-branco.png" class="bg-transparent" />
 
-      <div class="nav bg-transparent">
-        <a href="#start">
-          <button type="button" class="btn-sm border-0 px-2 button">
-            Início
-          </button>
-        </a>
-        <a href="#about">
-          <button type="button" class="btn-sm border-0 px-2 button">
+        <button id="menuToggle" class="hamburger" onclick="toggleMenu()">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+
+      <div class="nav bg-transparent" id="navMenu">
+        <a href="#start"
+          ><button class="btn-sm border-0 px-2 button">Início</button></a
+        >
+        <a href="#about"
+          ><button class="btn-sm border-0 px-2 button">
             Sobre o Projeto
-          </button>
-        </a>
-        <a href="#group">
-          <button type="button" class="btn-sm border-0 px-2 button">
-            Integrantes
-          </button>
-        </a>
-        <a href="#care">
-          <button type="button" class="btn-sm border-0 px-2 button">
-            Tipos
-          </button>
-        </a>
-        <a href="#pregnant">
-          <button type="button" class="btn-sm border-0 px-2 button">
-            Gestacional
-          </button>
-        </a>
-        <a href="#params">
-          <button type="button" class="btn-sm border-0 px-2 button">
-            Panorama
-          </button>
-        </a>
+          </button></a
+        >
+        <a href="#group"
+          ><button class="btn-sm border-0 px-2 button">Integrantes</button></a
+        >
+        <a href="#presentation"
+          ><button class="btn-sm border-0 px-2 button">Apresentação</button></a
+        >
       </div>
     </header>
     <main class="centralizer">
@@ -82,10 +76,10 @@
               </a>
             </div>
             <div class="carousel-item">
-              <a href="#pregnant">
+              <a href="#pregnancy">
                 <img
                   class="d-block w-100"
-                  src="./images/img2.png"
+                  src="./images/img2_.png"
                   alt="Segundo Slide"
                 />
               </a>
@@ -183,55 +177,6 @@
         </div>
       </section>
 
-      <div class="intersection" id="group"></div>
-
-      <section>
-        <h2>Integrantes:</h2>
-        <div
-          class="text group-container d-flex align-items-center justify-content-center bg-transparent"
-        >
-          <div class="card d-flex align-items-center border-0 bg-transparent">
-            <img class="card-img-top" src="./images/albert.png" />
-            <div class="card-body bg-transparent">
-              <h5 class="card-title bg-transparent">Pelópedas</h5>
-            </div>
-          </div>
-
-          <div class="card d-flex align-items-center border-0 bg-transparent">
-            <img
-              class="card-img-top"
-              src="./images/doido.png"
-              alt="Imagem de capa do card"
-            />
-            <div class="card-body bg-transparent">
-              <h5 class="card-text bg-transparent">Doido</h5>
-            </div>
-          </div>
-
-          <div class="card d-flex align-items-center border-0 bg-transparent">
-            <img
-              class="card-img-top"
-              src="./images/fulana.png"
-              alt="Imagem de capa do card"
-            />
-            <div class="card-body bg-transparent">
-              <h5 class="card-title bg-transparent">Fulana</h5>
-            </div>
-          </div>
-
-          <div class="card d-flex align-items-center border-0 bg-transparent">
-            <img
-              class="card-img-top"
-              src="./images/maju.png"
-              alt="Imagem de capa do card"
-            />
-            <div class="card-body bg-transparent">
-              <h5 class="card-title bg-transparent">Maju</h5>
-            </div>
-          </div>
-        </div>
-      </section>
-
       <div class="intersection" id="care"></div>
 
       <section>
@@ -316,7 +261,7 @@
             class="image-modal"
             onclick="closeImageModal(event)"
           >
-            <img id="modalImage" class="modal-content" />
+            <img id="modalImage" class="modal-content border-0" />
           </div>
 
           <b>Possíveis causas</b>
@@ -348,7 +293,7 @@
         </div>
       </section>
 
-      <div class="intersection" id="pregnant"></div>
+      <div class="intersection" id="pregnancy"></div>
 
       <section>
         <h2>Diabetes Gestacional</h2>
@@ -390,28 +335,44 @@
             </li>
           </ul>
 
-          <b>Riscos para a mãe</b>
-          <ul>
-            <li>Pré-eclâmpsia (hipertensão na gravidez)</li>
-            <li>Maior chance de desenvolver diabetes tipo 2 no futuro</li>
-            <li>Trabalho de parto prematuro ou parto cesáreo</li>
-          </ul>
+          <div
+            class="pregnancy-box d-flex justify-content-between align-items-center"
+          >
+            <div>
+              <b>Riscos para a mãe</b>
+              <ul>
+                <li>Pré-eclâmpsia (hipertensão na gravidez)</li>
+                <li>Maior chance de desenvolver diabetes tipo 2 no futuro</li>
+                <li>Trabalho de parto prematuro ou parto cesáreo</li>
+              </ul>
 
-          <b>Riscos para o bebê</b>
-          <ul>
-            <li>Macrossomia (bebê muito grande, dificultando o parto)</li>
-            <li>Hipoglicemia neonatal</li>
-            <li>Icterícia</li>
-            <li>Risco aumentado de obesidade e diabetes na vida adulta</li>
-          </ul>
+              <b>Riscos para o bebê</b>
+              <ul>
+                <li>Macrossomia (bebê muito grande, dificultando o parto)</li>
+                <li>Hipoglicemia neonatal</li>
+                <li>Icterícia</li>
+                <li>Risco aumentado de obesidade e diabetes na vida adulta</li>
+              </ul>
 
-          <b>Cuidados para evitar</b>
-          <ul>
-            <li>Fazer pré-natal adequado</li>
-            <li>Manter peso saudável antes e durante a gestação</li>
-            <li>Alimentar-se bem e praticar exercícios físicos</li>
-            <li>Evitar consumo excessivo de açúcares e carboidratos simples</li>
-          </ul>
+              <b>Cuidados para evitar</b>
+              <ul>
+                <li>Fazer pré-natal adequado</li>
+                <li>Manter peso saudável antes e durante a gestação</li>
+                <li>Alimentar-se bem e praticar exercícios físicos</li>
+                <li>
+                  Evitar consumo excessivo de açúcares e carboidratos simples
+                </li>
+              </ul>
+            </div>
+            <img src="./images/diabetes_gestacional_.png" />
+          </div>
+          <div
+            id="imageModal2"
+            class="image-modal2"
+            onclick="closeImageModal2(event)"
+          >
+            <img id="modalImage2" class="modal-content2 border-0" />
+          </div>
         </div>
       </section>
 
@@ -482,6 +443,96 @@
           </ul>
         </div>
       </section>
+
+      <div class="intersection" id="group"></div>
+
+      <section>
+        <h2>Integrantes:</h2>
+        <div
+          class="text group-container d-flex align-items-center justify-content-center bg-transparent"
+        >
+          <div class="card d-flex align-items-center border-0 bg-transparent">
+            <img class="card-img-top" src="./images/user1.png" />
+            <div class="card-body bg-transparent">
+              <h5 class="card-title bg-transparent">Hi-1</h5>
+            </div>
+          </div>
+
+          <div class="card d-flex align-items-center border-0 bg-transparent">
+            <img
+              class="card-img-top"
+              src="./images/user5.png"
+              alt="Imagem de capa do card"
+            />
+            <div class="card-body bg-transparent">
+              <h5 class="card-text bg-transparent">Hi-2</h5>
+            </div>
+          </div>
+
+          <div class="card d-flex align-items-center border-0 bg-transparent">
+            <img
+              class="card-img-top"
+              src="./images/user3.png"
+              alt="Imagem de capa do card"
+            />
+            <div class="card-body bg-transparent">
+              <h5 class="card-title bg-transparent">Hi-3</h5>
+            </div>
+          </div>
+
+          <div class="card d-flex align-items-center border-0 bg-transparent">
+            <img
+              class="card-img-top"
+              src="./images/user6.png"
+              alt="Imagem de capa do card"
+            />
+            <div class="card-body bg-transparent">
+              <h5 class="card-title bg-transparent">Hi-4</h5>
+            </div>
+          </div>
+          <div class="card d-flex align-items-center border-0 bg-transparent">
+            <img
+              class="card-img-top"
+              src="./images/user4.png"
+              alt="Imagem de capa do card"
+            />
+            <div class="card-body bg-transparent">
+              <h5 class="card-title bg-transparent">Hi-5</h5>
+            </div>
+          </div>
+          <div class="card d-flex align-items-center border-0 bg-transparent">
+            <img
+              class="card-img-top"
+              src="./images/user2.png"
+              alt="Imagem de capa do card"
+            />
+            <div class="card-body bg-transparent">
+              <h5 class="card-title bg-transparent">Hi-6</h5>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <div class="intersection" id="presentation"></div>
+
+      <section>
+        <h2>Apresentação:</h2>
+        <div class="text presentation-box">
+          <img class="img-thumbnail" src="./images/placeholder_img.jpg" />
+          <img class="img-thumbnail" src="./images/placeholder_img.jpg" />
+          <img class="img-thumbnail" src="./images/placeholder_img.jpg" />
+          <img class="img-thumbnail" src="./images/placeholder_img.jpg" />
+          <img class="img-thumbnail" src="./images/placeholder_img.jpg" />
+          <img class="img-thumbnail" src="./images/placeholder_img.jpg" />
+        </div>
+        <!-- <div
+            id="imageModal3"
+            class="image-modal3"
+            onclick="closeImageModal3(event)"
+          >
+            <img id="modalImage3" class="modal-content3 border-0" />
+          </div> -->
+      </section>
     </main>
 
     <footer id="p_dev">
@@ -506,6 +557,7 @@
       crossorigin="anonymous"
     ></script>
     <script src="./javascript/btnClickSplash.js"></script>
-    <script src="./javascript/modal.js"></script>
+    <script src="./javascript/modalExpandImg.js"></script>
+    <script src="./javascript/navHamburger.js"></script>
   </body>
 </html>

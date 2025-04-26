@@ -1,9 +1,10 @@
-/* background-color: #a4d4dc; */
+/* #a4d4dc */
 
 body {
   background-image: url(../images/bg1.jpg);
   background-attachment: fixed;
   width: 100vw;
+  min-height: 100vh;
   overflow-x: hidden;
   position: relative;
   z-index: 1;
@@ -16,25 +17,73 @@ body::after {
   left: 0;
   height: 100%;
   width: 100%;
-  background-color: rgba(255, 255, 255, .8);
+  background-color: rgba(255, 255, 255, 0.8);
   z-index: -1;
 }
 
 header {
   width: 100%;
-  height: 90px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
   background-color: #138baa;
   padding: 15px;
   position: fixed;
   z-index: 777;
-  box-shadow: 0 3px 7px rgba(0, 0, 0, .5);
+  box-shadow: 0 3px 7px rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: height 0.3s ease;
 }
 
 header img {
   width: 100px;
+}
+
+.nav {
+  display: flex;
+  flex-wrap: nowrap;
+  gap: 10px;
+}
+
+.header-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.hamburger {
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 35px;
+  height: 30px;
+  background: transparent;
+  border: none;
+  gap: 5px;
+  padding: 0;
+  z-index: 1000;
+}
+
+.hamburger span {
+  display: block;
+  width: 100%;
+  height: 4px;
+  background-color: white;
+  border-radius: 2px;
+  transition: all 0.3s ease-in-out;
+}
+
+.hamburger.active span:nth-child(1) {
+  transform: rotate(45deg) translate(6px, 6px);
+}
+
+.hamburger.active span:nth-child(2) {
+  opacity: 0;
+}
+
+.hamburger.active span:nth-child(3) {
+  transform: rotate(-45deg) translate(6px, -6px);
 }
 
 main {
@@ -42,34 +91,12 @@ main {
 }
 
 section {
-  /* padding-top: 150px !important; */
   height: 100%;
 }
 
 section h2 {
   text-align: center;
   padding-bottom: 30px;
-}
-
-footer {
-  height: 20px;
-  text-align: center;
-  font-size: 12px;
-  font-family: 'Nunito';
-  font-weight: bold;
-  background-color: #138baa;
-  color: #ffffff;
-}
-
-footer a {
-  color: #ffffff;
-  font-size: 12px;
-  cursor: pointer;
-}
-
-footer a:hover {
-  color: #f6b23b;
-  text-decoration: none;
 }
 
 .sec1 {
@@ -84,11 +111,6 @@ footer a:hover {
   border-radius: 20px;
 }
 
-.nav {
-  display: flex;
-  gap: 10px;
-}
-
 .iColor span {
   background-color: grey;
   border-radius: 50%;
@@ -97,13 +119,13 @@ footer a:hover {
 }
 
 .card {
- width: 150px; 
+  width: 150px;
 }
 
 .card img {
-height: 100px;
-width: 100px;
-border-radius: 50%;
+  height: 100px;
+  width: 100px;
+  border-radius: 50%;
 }
 
 .group-container2 .card img {
@@ -111,7 +133,7 @@ border-radius: 50%;
   width: 100px;
   border-radius: 0;
   cursor: pointer;
-  }
+}
 
 .button {
   background-color: #f6b23b;
@@ -130,44 +152,94 @@ border-radius: 50%;
   text-align: justify;
 }
 
-.text ul{
+.text ul {
   display: block !important;
   margin-left: 20px;
 }
 
 .text li {
-  list-style: disc
+  list-style: disc;
 }
 
 .intersection {
-background-image: url(../images/bg1.jpg);
-background-size: 150px;
-padding: 0;
-margin: 120px 0 20px 0;
-height: 30px;
+  background-image: url(../images/bg1.jpg);
+  background-size: 150px;
+  padding: 0;
+  margin: 120px 0 20px 0;
+  height: 30px;
 }
 
-.image-modal {
+.image-modal,
+.image-modal2,
+.image-modal3 {
   display: none;
   position: absolute;
-  top: 300px;
+  top: -9%;
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(0,0,0,0.8);
+  background-color: rgba(0, 0, 0, 0.3);
   justify-content: center;
   align-items: center;
   z-index: 999;
+  overflow: hidden;
 }
 
-.image-modal.active {
+.image-modal2 {
+  top: 10%;
+}
+
+.image-modal3 {
+  top: 87%;
+  height: 100%;
+  max-height: 100vh;
+}
+
+.image-modal.active,
+.image-modal2.active, .image-modal3.active {
   display: flex;
 }
 
-.modal-content {
+.modal-content,
+.modal-content2, .modal-content3 {
   max-width: 50%;
   max-height: 50%;
   border-radius: 10px;
-  box-shadow: 0 0 15px rgba(255,255,255,0.3);
+  box-shadow: 0 0 15px rgba(255, 255, 255, 0.8);
 }
 
+.modal-content2 {
+  box-shadow: none;
+}
+
+.pregnancy-box img {
+  height: 300px;
+}
+
+.presentation-box {
+  position: relative;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 15px;
+}
+
+footer {
+  height: 20px;
+  text-align: center;
+  font-size: 12px;
+  font-family: "Nunito";
+  font-weight: bold;
+  background-color: #138baa;
+  color: #ffffff;
+}
+
+footer a {
+  color: #ffffff;
+  font-size: 12px;
+  cursor: pointer;
+}
+
+footer a:hover {
+  color: #f6b23b;
+  text-decoration: none;
+}

@@ -1,32 +1,72 @@
 @media (max-width: 768px) {
-    .nav {
-      display: grid !important;
-      grid-template-columns: repeat(3, 1fr) !important;
-      align-content: center !important;
-    }
+  .pregnancy-box img {
+    height: 200px;
   }
-  
-  @media (max-width: 430px) {
-    header {
-      flex-direction: column;
-      gap: 5px;
-      height: 130px !important;
-    }
-  
-    header img {
-      width: 70px !important; 
-     }
-  
-     .sec1 {
-      height: fit-content !important;
-     }
-  
-     section {
-      height: 100% !important;
-     }
-  
-     .group-container, .group-container2 {
-      display: grid !important;
-      grid-template-columns: repeat(2, 1fr);
-    }
+}
+
+@media (max-width: 430px) {
+  header {
+    flex-direction: column;
+    align-items: flex-start;
+    height: auto;
   }
+
+  .nav {
+    flex-direction: column;
+    width: 100%;
+    display: none;
+    margin-top: 15px;
+    gap: 7px;
+  }
+
+  .nav.show {
+    display: flex;
+  }
+
+  .nav a {
+    width: 100%;
+  }
+
+  .nav .button {
+    width: 100%;
+  }
+
+  .hamburger {
+    display: flex;
+  }
+
+  .sec1 {
+    height: fit-content;
+  }
+
+  section {
+    height: 100%;
+  }
+
+  .group-container,
+  .group-container2 {
+    display: grid !important;
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .image-modal {
+    top: -11%;
+  }
+
+  .image-modal2 {
+    top: 15%;
+  }
+
+  .pregnancy-box {
+    flex-direction: column;
+  }
+
+  .modal-content2 {
+    max-width: 70%;
+    max-height: 70%;
+  }
+
+  .presentation-box {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
