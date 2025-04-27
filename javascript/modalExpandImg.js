@@ -17,40 +17,20 @@ function closeImageModal(event) {
   }
 }
 
-document.querySelectorAll(".pregnancy-box img").forEach((img) => {
-  img.addEventListener("click", () => {
-    const modal2 = document.getElementById("imageModal2");
-    const modal2Img = document.getElementById("modalImage2");
-    modal2Img.src = img.src;
-    modal2.classList.add("active");
+function setupImageExpansion() {
+  const images = document.querySelectorAll(".presentation-box img");
+
+  images.forEach((img) => {
+    img.addEventListener("click", () => {
+      const alreadyExpanded = img.classList.contains("expanded");
+
+      images.forEach((i) => i.classList.remove("expanded"));
+
+      if (!alreadyExpanded) {
+        img.classList.add("expanded");
+      }
+    });
   });
-});
-
-function closeImageModal2(event) {
-  const modal2 = document.getElementById("imageModal2");
-  const modal2Img = document.getElementById("modalImage2");
-
-  if (event.target === modal2) {
-    modal2.classList.remove("active");
-    modal2Img.src = "";
-  }
 }
 
-document.querySelectorAll(".presentation-box img").forEach((img) => {
-  img.addEventListener("click", () => {
-    const modal3 = document.getElementById("imageModal3");
-    const modal3Img = document.getElementById("modalImage3");
-    modal3Img.src = img.src;
-    modal3.classList.add("active");
-  });
-});
-
-function closeImageModal3(event) {
-  const modal3 = document.getElementById("imageModal3");
-  const modal3Img = document.getElementById("modalImage3");
-
-  if (event.target === modal3) {
-    modal3.classList.remove("active");
-    modal3Img.src = "";
-  }
-}
+document.addEventListener("DOMContentLoaded", setupImageExpansion);

@@ -112,7 +112,6 @@ section h2 {
 }
 
 .iColor span {
-  background-color: grey;
   border-radius: 50%;
   padding: 20px;
   cursor: pointer;
@@ -165,13 +164,12 @@ section h2 {
   background-image: url(../images/bg1.jpg);
   background-size: 150px;
   padding: 0;
-  margin: 120px 0 20px 0;
+  padding-top: 30px;
+  margin: 120px 0 30px 0;
   height: 30px;
 }
 
-.image-modal,
-.image-modal2,
-.image-modal3 {
+.image-modal {
   display: none;
   position: absolute;
   top: -9%;
@@ -185,31 +183,15 @@ section h2 {
   overflow: hidden;
 }
 
-.image-modal2 {
-  top: 10%;
-}
-
-.image-modal3 {
-  top: 87%;
-  height: 100%;
-  max-height: 100vh;
-}
-
-.image-modal.active,
-.image-modal2.active, .image-modal3.active {
+.image-modal.active {
   display: flex;
 }
 
-.modal-content,
-.modal-content2, .modal-content3 {
+.modal-content {
   max-width: 50%;
   max-height: 50%;
   border-radius: 10px;
   box-shadow: 0 0 15px rgba(255, 255, 255, 0.8);
-}
-
-.modal-content2 {
-  box-shadow: none;
 }
 
 .pregnancy-box img {
@@ -219,8 +201,30 @@ section h2 {
 .presentation-box {
   position: relative;
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(4, 1fr);
   gap: 15px;
+  justify-items: center;
+  min-height: 500px;
+  max-height: 100%;
+  padding-bottom: 150px;
+}
+
+.presentation-box img {
+  cursor: pointer;
+  transition: all 0.3s ease;
+  z-index: 1;
+  position: relative;
+}
+
+.presentation-box img.expanded {
+  position: relative;
+  width: 90%;
+  max-width: 800px;
+  height: auto;
+  object-fit: contain;
+  z-index: 10;
+  transform: scale(2);
+  margin: 20px auto;
 }
 
 footer {

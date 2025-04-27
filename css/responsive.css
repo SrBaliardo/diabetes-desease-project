@@ -1,6 +1,10 @@
 @media (max-width: 768px) {
-  .pregnancy-box img {
-    height: 200px;
+  .image-modal {
+    top: -11%;
+  }
+
+  .presentation-box {
+    grid-template-columns: repeat(3, 1fr);
   }
 }
 
@@ -50,20 +54,11 @@
   }
 
   .image-modal {
-    top: -11%;
-  }
-
-  .image-modal2 {
-    top: 15%;
+    top: -13%;
   }
 
   .pregnancy-box {
     flex-direction: column;
-  }
-
-  .modal-content2 {
-    max-width: 70%;
-    max-height: 70%;
   }
 
   .presentation-box {
